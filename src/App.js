@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
 import MyCarousel from './components/carousel/MyCarousel';
+import {  BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ImageGridList from './components/ImageGridList/ImageGridList';
 import BigBanner from './components/BigBanner/BigBanner';
 import TextComponent from './components/TextComponent';
@@ -38,13 +39,36 @@ function App() {
     },
   ]
   return (
-    <>
+    <Router>
     <NavBar/>
-    <BigBanner image={banner} link={bannerLink}/>
-    <TextComponent text="HOT OFFERS" />
-    <MyCarousel/>
-    <ImageGridList imageLinkList={imageLinkList} />
-    </>
+    <Routes>
+      <Route path="/" element={
+        <>
+        <BigBanner image={banner} link={bannerLink}/>
+        <TextComponent text="HOT OFFERS" />
+        <MyCarousel  />
+        <ImageGridList imageLinkList={imageLinkList} />
+        </>
+      }/>
+
+    {/*
+      <Route path="/page2">
+        <BigBanner {...page2Props.banner} />
+        <TextComponent text="HOT OFFERS" />
+        <MyCarousel {...page2Props.carousel} />
+        <ImageGridList {...page2Props.gridList} />
+      </Route>
+
+      <Route path="/page3">
+        <BigBanner {...page3Props.banner} />
+        <TextComponent text="HOT OFFERS" />
+        <MyCarousel {...page3Props.carousel} />
+        <ImageGridList {...page3Props.gridList} />
+      </Route>
+  */}
+    </Routes>
+  </Router>
+   
   );
 }
 
