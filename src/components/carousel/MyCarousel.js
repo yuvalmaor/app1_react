@@ -1,27 +1,14 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import logo from '../../logo.svg';
-import logo2 from '../../home.png';
-import shot from '../../Screenshot.png'
-import shot2 from '../../Screenshot2.png'
 
-const MyCarousel = () => {
-  const images = [
-    logo,
-    logo2,
-    shot,
-    shot2,
-    //... add more image URLs
-  ];
-
+const MyCarousel = ({ props }) => {
   const responsive = {
     desktop: {
       breakpoint: { max: 2000, min: 1024 },
-      items: 4,
+      items: 3,
       slidesToSlide: 1 // optional, default to 1.
     },
- 
     tablet: {
       breakpoint: { max: 1024, min: 464 },
       items: 4,
@@ -35,7 +22,8 @@ const MyCarousel = () => {
   };
 
   return (
-    <Carousel 
+    <div className="flex justify-center"> 
+    <Carousel
       swipeable={false}
       draggable={false}
       showDots={true}
@@ -53,12 +41,19 @@ const MyCarousel = () => {
       dotListClass="custom-dot-list-style"
       itemClass="carousel-item-padding-40-px"
     >
-      {images.map((image, index) => (
+      {props.map((item, index) => (
         <div key={index}>
-          <img src={image} alt={`carousel-${index}`} style={{width: '80%', height: 'auto'}} />
+          <a href={item.link} target="_blank" rel="noopener noreferrer">
+            <img
+              src={item.image}
+              alt={`carousel-${index}`}
+              style={{ width: "85%", height: "auto" }}
+            />
+          </a>
         </div>
       ))}
     </Carousel>
+    </div>
   );
 };
 

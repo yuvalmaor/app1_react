@@ -37,10 +37,9 @@ const NavBar = (props) => {
         <div class="hidden sm:ml-6 sm:block">
           <div class="flex space-x-4">
             
-            <a href="#" className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page"><img class="hidden h-8 w-auto lg:block" src={home} alt="Your Company"/></a>
-            <a href="#" className="flex items-center justify-center text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">CASINO</a>
-            <a href="#" className="flex items-center justify-center text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">BINGO</a>
-            <a href="#" className="flex items-center justify-center text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">SPORT BETTING</a>
+            <a href="/" className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page"><img class="hidden h-8 w-auto lg:block" src={home} alt="Your Company"/></a>
+            <a href="/casino" className="flex items-center justify-center text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">CASINO</a>
+            <a href="/sport" className="flex items-center justify-center text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">SPORT BETTING</a>
           </div>
         </div>
       </div>
@@ -79,9 +78,8 @@ const NavBar = (props) => {
     <div class="space-y-1 px-2 pb-3 pt-2" >
       
       
-      <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium ">CASINO</a>
-      <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">BINGO</a>
-      <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">SPORT BETTING</a>
+      <a href="/casino" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium ">CASINO</a>
+      <a href="/sport" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">SPORT BETTING</a>
     </div>
   </div>
 </nav>
