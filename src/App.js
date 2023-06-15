@@ -65,21 +65,21 @@ function App() {
       
       name: 'Borgata Casino',
       link: 'https://mediaserver.betmgmpartners.com/renderBanner.do?zoneId=1676301&tdpeh=XXXXX',
-      offer:'',
+      offer:'100% DEPOSIT MATCH UP TO $1000 +$20 FREE ON SIGN UP',
       image: BorgataC
     },
     {
       
       name: 'Wynnbet Casino',
       link: 'https://wlwsiusllcwynnbet.adsrv.eacdn.com/C.ashx?btag=a_377b_176c_&affid=126&siteid=377&adid=176&c=XXXXX',
-      offer:'',
+      offer:'100% DEPOSIT MATCH UP TO $1000',
       image: WynnBetC
     },
     {
       
         name: 'Caesars Casino',
         link: 'https://wlwilliamhillus.adsrv.eacdn.com/C.ashx?btag=a_7249b_2341c_&affid=249&siteid=7249&adid=2341&c=XXXXX',
-        offer:'',
+        offer:'$10 SIGN-UP BONUS + 200% DEPOSIT-MATCH BONUS UP TO $200',
         image: CaesarsC
     },
     {
@@ -93,7 +93,7 @@ function App() {
       
         name: 'Unibet Casino',
         link: 'https://www.arpasivut.com/C.ashx?btag=a_4558b_567c_&affid=564&siteid=4558&adid=567&c=XXXXX',
-        offer:'',
+        offer:'50% DEPOSIT MATCH UP TO 1000$ BONUS',
         image: unibetC
     },
   ]
@@ -105,21 +105,21 @@ const imageListSport = [
       
         name: 'BetMGM Sport',
         link: 'https://mediaserver.betmgmpartners.com/renderBanner.do?zoneId=1676308&tdpeh=XXXXX',
-        offer:'',
+        offer:'$1000 BONUS PAID BACK IN BONUS BET IF YOU DONT WIN',
         image: BetMGMS
       },
       {
        
         name: 'Borgata Sport',
         link: 'https://mediaserver.betmgmpartners.com/renderBanner.do?zoneId=1676306&tdpeh=XXXXX',
-        offer:'',
+        offer:'GET $100 WHEN YOU BET $20',
         image: BorgataS
       },
       {
         
         name: 'Caesars Sport',
         link: 'https://wlwilliamhillus.adsrv.eacdn.com/C.ashx?btag=a_6684b_2486c_&affid=249&siteid=6684&adid=2486&c=XXXXX',
-        offer:'',
+        offer:'GET UP TO $1250 BACK AS A FREE BET IF YOU DONT WIN',
         image: CaesarsS
       },
       {
@@ -133,14 +133,14 @@ const imageListSport = [
         
           name: 'PointsBet Sport',
           link: 'https://record.pointsbetpartners.com/_orB-OfF7jVxLjTu7CWcLIGNd7ZgqdRLk/1/?payload=XXXXX&s2s.req_id=XXXXX',
-          offer:'',
+          offer:'BET $100 AND GET $50 BET CREDIT + $50 CASINO BONUS',
           image: PointsS
       },
       {
         
           name: 'Unibet Sport',
           link: 'https://www.arpasivut.com/C.ashx?btag=a_4558b_299c_&affid=564&siteid=4558&adid=299&c=XXXXX',
-          offer:'',
+          offer:'BET $25 GET $100',
           image: unibetS
       },
       
