@@ -1,10 +1,17 @@
 import React,{useState} from 'react';
 import home from '../home-icon.svg';
+import { NavLink } from 'react-router-dom';
 
-const NavBar = (props) => {
+
+
+const NavBar = () => {
     //const classes = 'card ' + props.className;
     const [isOpen, setIsOpen] = useState(false);
-
+    const [page,setPage]=useState("/");
+    const changePage = (newPage) => {
+      setPage(newPage);
+      console.log(page)
+    }
     const toggleMenu = () => {
         setIsOpen(!isOpen);
         console.log(isOpen)
@@ -13,7 +20,7 @@ const NavBar = (props) => {
     return (
 
         <nav class="bg-gray-800">
-  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+  <div class=" max-w-7xl px-2 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between">
       <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
         
@@ -37,9 +44,57 @@ const NavBar = (props) => {
         <div class="hidden sm:ml-6 sm:block">
           <div class="flex space-x-4">
             
-            <a href="/" className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page"><img class="hidden h-8 w-auto lg:block" src={home} alt="Your Company"/></a>
-            <a href="/casino" className="flex items-center justify-center text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">CASINO</a>
-            <a href="/sport" className="flex items-center justify-center text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">SPORT BETTING</a>
+            
+            <NavLink
+              key={'home'}
+              to={'/'}
+              className={({
+              isActive,
+               }) => {
+              return (
+                                                           
+              (!isActive
+              ? " text-white rounded-md px-3 py-2 text-sm font-medium"
+              : "bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium")
+              );
+              }}
+              aria-current="page"
+              >
+
+              <img class="hidden h-8 w-auto lg:block" src={home} alt="Your Company"/>
+              </NavLink>
+              <NavLink
+              key={'casino'}
+              to={'/casino'}
+              className={({
+              isActive,
+               }) => {
+              return (
+                                                           
+              (!isActive
+              ? "flex items-center justify-center text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+              : "bg-gray-900  flex items-center justify-center text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium")
+              );
+              }}
+              >
+              {'CASINO'}
+              </NavLink>
+              <NavLink
+              key={'sport'}
+              to={'/sport'}
+              className={({
+              isActive,
+               }) => {
+              return (
+                                                           
+              (!isActive
+              ? "flex items-center justify-center text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+              : "bg-gray-900  flex items-center justify-center text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium")
+              );
+              }}
+              >
+              {'SPORT'}
+              </NavLink>
           </div>
         </div>
       </div>
