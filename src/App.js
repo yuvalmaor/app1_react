@@ -126,7 +126,7 @@ const imageListSport = [
         
         name: 'Wynnbet Sport',
         link: 'https://wlwsiusllcwynnbet.adsrv.eacdn.com/C.ashx?btag=a_377b_100c_&affid=126&siteid=377&adid=100&c=XXXXX',
-        offer:'ET $100 AND GET $50 BET CREDIT + $50 CASINO BONUS',
+        offer:'BET $100 AND GET $50 BET CREDIT + $50 CASINO BONUS',
         image: WynnBetS 
       },
       {
