@@ -10,7 +10,7 @@ import TextComponent from './components/TextComponent';
 import Footer from './components/Footer';
 import NewGridList from './components/NewGridList/NewGridList';
 import './App.css';
-import banner from './Bigbanner.png';
+import banner from './images/unibet casino.png';
 import BetMGMC from './images/BETMGM5.png'
 import BorgataC from './images/Borgata-Casino5.png'
 import BorgataS from './images/Borgata_Sport5.png'
@@ -44,7 +44,7 @@ import WynnBetS from './images/WynnBet Sport5.png'
 
 
 function App() {
-  const bannerLink='http://imperialbonusclub.com/Winter/IBC-EON-1250WB-EN-001.php?snippet=_empireonet'
+  const bannerLink='https://www.arpasivut.com/C.ashx?btag=a_4558b_567c_&affid=564&siteid=4558&adid=567&c=XXXXX'
   
   const imageListCasino = [
     {
