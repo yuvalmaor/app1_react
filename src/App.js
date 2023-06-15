@@ -11,22 +11,22 @@ import Footer from './components/Footer';
 import NewGridList from './components/NewGridList/NewGridList';
 import './App.css';
 import banner from './Bigbanner.png';
-import BetMGMC from './images/BetMGM-Casino2.png'
-import BorgataC from './images/Borgata Casino.gif'
-import BorgataS from './images/Borgata_Sport.png'
-import CaesarsS from './images/Caesars_S&C.png'
-import CaesarsC from './images/Caesars_S&C.png'
+import BetMGMC from './images/BETMGM5.png'
+import BorgataC from './images/Borgata-Casino5.png'
+import BorgataS from './images/Borgata_Sport5.png'
+import CaesarsS from './images/Caesars_S&C5.png'
+import CaesarsC from './images/Caesars_S&C5.png'
 
-import PointsS from './images/Pointsbet12.png'
+import PointsS from './images/Pointsbet125.png'
 
-import SIC from './images/SI CASINO.png'
-import unibetC from './images/unibet casino.png'
-import unibetS from './images/unibet sport.png'
-import partyC from './images/Party Casino.png'
-import WynnBetC from './images/WynnBet Casino3.png'
+import SIC from './images/SI CASINO5.png'
+import unibetC from './images/unibet casino5.png'
+import unibetS from './images/unibet sport5.png'
+import partyC from './images/Party Casino5.png'
+import WynnBetC from './images/WynnBet Casino35.png'
 
-import BetMGMS from './images/BetMGM Sport.png'
-import WynnBetS from './images/WynnBet Sport.png'
+import BetMGMS from './images/BetMGM Sport5.png'
+import WynnBetS from './images/WynnBet Sport5.png'
 
 
 
@@ -51,14 +51,14 @@ function App() {
       
       name: 'BetMGM Casino',
       link: 'https://mediaserver.betmgmpartners.com/renderBanner.do?zoneId=1676299&tdpeh=XXXXX',
-      offer:'',
+      offer:'100% DEPOSIT MATCH (UP TO 1000$) PLUS $25 ON THE HOUSE',
       image: BetMGMC
     },
     {
      
       name: 'Party Casino',
       link: 'https://mediaserver.betmgmpartners.com/renderBanner.do?zoneId=1676304&tdpeh=XXXXX',
-      offer:'',
+      offer:'100% DEPOSIT MATCH (UP TO $500) AND 100 FREE SPINS',
       image: partyC
     },
     {

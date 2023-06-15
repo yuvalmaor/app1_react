@@ -6,7 +6,7 @@ const MyCarousel = ({ props }) => {
   const responsive = {
     desktop: {
       breakpoint: { max: 2000, min: 1024 },
-      items: 3,
+      items: 4,
       slidesToSlide: 1 // optional, default to 1.
     },
     tablet: {
@@ -16,7 +16,7 @@ const MyCarousel = ({ props }) => {
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 4,
+      items: 2,
       slidesToSlide: 1 // optional, default to 1.
     }
   };
