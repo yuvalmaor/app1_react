@@ -169,7 +169,7 @@ const imageListSport = [
         <BigBanner image={banner} link={bannerLink}/>
         <TextComponent text="HOT OFFERS" />
         <MyCarousel props={imageListCasino} />
-        <ImageGridList imageLinkList={imageListCasino} />
+        <NewGridList imageLinkList={imageListCasino} />
         </>
       }/>
 
@@ -179,7 +179,7 @@ const imageListSport = [
         <BigBanner image={banner} link={bannerLink}/>
         <TextComponent text="HOT OFFERS" />
         <MyCarousel props={imageListSport} />
-        <ImageGridList imageLinkList={imageListSport} />
+        <NewGridList imageLinkList={imageListSport} />
         </>
       }/>
 

@@ -3,10 +3,8 @@ import ListItem from './ListItem';
 
 const NewGridList = ({ imageLinkList }) => {
 
-    const bonus="\nPLUS\n\
-    DEPOSIT $20 USD --> GET $20 IN GIFT CARD\n\
-    DEPOSIT $40 USD --> GET $40 IN GIFT CARD\n\
-    DEPOSIT $50 USD --> GET $50 IN GIFT CARD\n\
+    const bonus="\n+\n\
+    100% CASHBACK\
     UP TO $50 IN GIFTCARD"
 
   return (
@@ -21,7 +19,7 @@ const NewGridList = ({ imageLinkList }) => {
                   <p className="text-lg text-black font-semibold">
                     {item.name}
                   </p>
-                  <p className="text-slate-500 font-medium text-sm sm:text-xs sm:font-size:0.5rem">
+                  <p classNamse="text-slate-500 font-medium text-sm sm:text-xs sm:font-size:0.5rem">
 
                     {item.offer+bonus}
                   </p>
