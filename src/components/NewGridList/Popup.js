@@ -2,19 +2,25 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-import {
-    Card,
-    Input,
-    Checkbox,
-    
-    Typography,
-  } from "@material-tailwind/react";
-
-function Popup(prop) {
+function Popup({ prop }) {
   const [show, setShow] = useState(false);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [selectedCard, setSelectedCard] = useState('');
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const handleSubmit = () => {
+    const formData = {
+      name,
+      email,
+      selectedCard,
+    };
+    console.log(formData);
+    window.open(prop, '_blank');
+    handleClose();
+  };
 
   return (
     <>
@@ -24,63 +30,62 @@ function Popup(prop) {
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Get your bonus</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-        <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
-        <div className="mb-4 flex flex-col gap-6">
-          <Input size="lg" label="Name" />
-          <Input size="lg" label="Email" />
-          <Input type="password" size="lg" label="Password" />
-        </div>
-        <Checkbox
-          label={
-            (
-              <Typography
-                variant="small"
-                color="gray"
-                className="flex items-center font-normal"
-              >
-                I agree the
-                <a
-                  href="#"
-                  className="font-medium transition-colors hover:text-blue-500"
-                >
-                  &nbsp;Terms and Conditions
-                </a>
-              </Typography>
-            )
-          }
-          containerProps={{ className: "-ml-2.5" }}
-        />
-        <Button className="mt-6" fullWidth>
-          Register
-        </Button>
-        <Typography color="gray" className="mt-4 text-center font-normal">
-          Already have an account?{" "}
-          <a
-            href="#"
-            className="font-medium text-blue-500 transition-colors hover:text-blue-700"
-          >
-            Sign In
-          </a>
-        </Typography>
-      </form>
-
-
-
-
-
-
-
-
+          <form className="w-full max-w-sm">
+          <div className="md:flex md:items-center mb-6">
+              <div className="md:w-1/3">
+                <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" htmlFor="inline-full-name">
+                  Full Name
+                </label>
+              </div>
+              <div className="md:w-2/3">
+                <input className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name" type="text" value={name} onChange={(e) => setName(e.target.value)}/>
+              </div>
+            </div>
+            <div className="md:flex md:items-center mb-6">
+              <div className="md:w-1/3">
+                <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" htmlFor="inline-email">
+                  Email
+                </label>
+              </div>
+              <div className="md:w-2/3">
+                <input className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-email" type="text" value={email} onChange={(e) => setEmail(e.target.value)}/>
+              </div>
+            </div>
+            <div className="md:flex md:items-center mb-6">
+              <div className="md:w-1/3"></div>
+              <label className="md:w-2/3 block text-gray-500 font-bold">
+                <input className="mr-2 leading-tight" type="radio" name="card" value="card1" checked={selectedCard === "card1"} onChange={(e) => setSelectedCard(e.target.value)}/>
+                <span className="text-sm">
+                  card1
+                </span>
+              </label>
+            </div>
+            <div className="md:flex md:items-center mb-6">
+              <div className="md:w-1/3"></div>
+              <label className="md:w-2/3 block text-gray-500 font-bold">
+                <input className="mr-2 leading-tight" type="radio" name="card" value="card2" checked={selectedCard === "card2"} onChange={(e) => setSelectedCard(e.target.value)}/>
+                <span className="text-sm">
+                  card2
+                </span>
+              </label>
+            </div>
+            <div className="md:flex md:items-center mb-6">
+              <div className="md:w-1/3"></div>
+              <label className="md:w-2/3 block text-gray-500 font-bold">
+                <input className="mr-2 leading-tight" type="radio" name="card" value="card3" checked={selectedCard === "card3"} onChange={(e) => setSelectedCard(e.target.value)}/>
+                <span className="text-sm">
+                  card3
+                </span>
+              </label>
+            </div>
+          </form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
+          <Button variant="primary" color='bg-purple-500' type="button" onClick={handleSubmit}>
+          Continue2
           </Button>
         </Modal.Footer>
       </Modal>

@@ -30,8 +30,9 @@ const NewGridList = ({ imageLinkList }) => {
                 <Popup prop={item.link}/>
               
               </div>
+              
             </div>
-            
+           
           {/*</a>*/}
         </div>
       ))}
